@@ -3,13 +3,16 @@ body {
   text-align: center;
   font-family: 'Trebuchet MS'; font-size: 20px; font-style: normal; font-variant: normal;
 }
-h1 {
-  color: skyblue;
+h2 {
+  font-weight: bolder
 }
 button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
+  background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -17,9 +20,10 @@ button {
 }
 
 input {
-  background-color: #4CAF50; /* Green */
+  background-color: white; /* Green */
   border: none;
-  color: white;
+  color: black;
+  padding:9px 0;
   text-align: center;
   text-decoration: none;
   display: inline-block;
