@@ -13,7 +13,7 @@
         <script src="semantic/semantic.min.js"></script>
         <title>Home Page</title>
     </head>
-    
+
     <body>
         <h2 class="ui center aligned block header" style="text-align: center;">
             <i class="home icon"></i>
@@ -22,6 +22,16 @@
                 <div class="sub header">Your main sound alerts will appear here</div>
             </div>
         </h2>
+
+        <h3 class="ui left aligned blue header" style="margin-left: 20px; margin-top: 40px;"><span id="datetime"></span></h3>
+
+        <script>
+            var dt = new Date();
+            document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
+        </script>
+        
+        <img class="ui fluid image" src="footsteps_sound_alert.png"
+             style="margin-top: 60px">
 
         <div class="ui bottom fixed four labeled icon menu">
             <a class="item active">

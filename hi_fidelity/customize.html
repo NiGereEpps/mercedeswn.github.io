@@ -23,8 +23,65 @@
             </div>
         </h2>
 
+        <h2> Sounds </h2>
+<input class="check-with-label" type="checkbox" id="sound1" value="sound1">
+<label class="label-for-check" for="sound1"> Siren </label>
+<img src="sound 1 waves.png" style="width:40px;height:20px;">
+<br>
+<input class="check-with-label" type="checkbox" id="sound2" name="sound2">
+<label class="label-for-check" for="sound2"> Bike </label>
+<img src="sound 2 waves.png" style="width:40px;height:20px;">
+<br>
+<input class="check-with-label" type="checkbox" id="sound3" name="sound3">
+<label class="label-for-check" for="sound3"> Footsteps </label>
+<img src="sound 3 waves.png" style="width:40px;height:20px;">
+<br>
+<button> 🔴 </button> <button> Add Sound </button> <input placeholder="sound name">
+<br>
+
+<h2> Presets </h2>
+<style type="text/css">
+    .form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+</style>
+<p>
+<input class="check-with-label" type="checkbox" id="preset1" name="preset1"> <label class="label-for-check" for="preset1"> Preset 0 : Cobb Hall 
+<a href="edit_preset.html"><button>Edit</button></a></label><br>
+<br>
+<input class="check-with-label" type="checkbox" id="preset1" name="preset1"> <label class="label-for-check" for="preset1"> Preset 1 : 8am-5pm</label>
+<a href="edit_preset.html"><button>Edit</button></a></label><br>
+<br>
+<input class="check-with-label" type="checkbox" id="preset2" name="preset2"> <label class="label-for-check" for="preset2"> Preset 2 : 5pm-8pm</label>
+<a href="edit_preset.html"><button>Edit</button></a></label><br>
+<br>
+<input class="check-with-label" type="checkbox" id="preset3" name="preset3"> <label class="label-for-check" for="preset3"> Preset 3 : 8pm-8am</label>
+<a href="edit_preset.html"><button>Edit</button></a></label><br>
+<br>
+<button> Add Preset </button> <input placeholder="preset name">
+</p>
+
+<script type="text/javascript"> 
+  $(document).ready(function() { 
+    $("#preset1").click(function() {
+      $("#sound1").prop("checked", true); 
+   }); 
+    $("#preset2").click(function() {
+      $("#sound2").prop("checked", true); 
+      $("#sound1").prop("checked", true); 
+    }); 
+    $("#preset3").click(function() { 
+      $("#sound1").prop("checked", true); 
+      $("#sound2").prop("checked", true); 
+      $("#sound3").prop("checked", true); 
+     }); 
+   }); 
+</script>
+
         <div class="ui bottom fixed four labeled icon menu">
-            <a class="item" href="index.html">
+            <a class="item" href="home.html">
                 <i class="home icon"></i>
                 Home
             </a>
