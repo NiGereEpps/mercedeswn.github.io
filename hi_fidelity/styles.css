@@ -1,13 +1,12 @@
 body {
-  background-color: powderblue;
+  background-color: lightgray;
+  text-align: center;
+  font-family: 'Trebuchet MS'; font-size: 20px; font-style: normal; font-variant: normal;
 }
 h1 {
-  color: blue;
+  color: skyblue;
 }
-p {
-  color: red;
-}
-.button {
+button {
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
@@ -17,21 +16,29 @@ p {
   display: inline-block;
   font-size: 16px;
 }
-.my-button {
-    display: inline-block;
-    margin: 5px;
-    background: #b06f97; 
-    color: #333; 
-    font-size: 1.5em;
-    font-family: ‘Georgia’, serif;
-    font-style: italic;
-    border-radius: 50px; 
-    padding: 8px 16px; 
-    /*-moz-transition: all 0.2s;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;*/
+
+input {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
-.my-button:hover {
-    background: #666;
-    color: #c1e1e0;
+
+form{
+float: left
+}
+
+.inner-div
+{
+     display: inline-block;
+     padding: 50px;
+}
+
+.check-with-label:checked + .label-for-check {
+  font-weight: bold;
+  color: red;
 }
