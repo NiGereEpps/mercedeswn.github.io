@@ -6,42 +6,52 @@
      content="width=device-width, initial-scale=1, user-scalable=yes">
  <link rel="stylesheet" href="styles.css">
   <title>Customize</title>
+
+<script src= 
+"https://code.jquery.com/jquery-2.2.4.min.js"> 
+    </script> 
+
 </head>
 <body>
 <h1>Customize</h1>
 
 <h2> Sounds </h2>
-<p>
-<input class="check-with-label" type="checkbox" id="sound1" name="sound1">
-<label class="label-for-check" for="sound1"> Sound 3 </label><br>
-</p>
-
-<p>
+<input class="check-with-label" type="checkbox" id="sound1" value="sound1">
+<label class="label-for-check" for="sound1"> Sound 1 </label><br>
+<br>
 <input class="check-with-label" type="checkbox" id="sound2" name="sound2">
 <label class="label-for-check" for="sound2"> Sound 2 </label><br>
-</p>
-
-<p>
+<br>
 <input class="check-with-label" type="checkbox" id="sound3" name="sound3">
 <label class="label-for-check" for="sound3"> Sound 3 </label><br>
-</p>
-
-<p>
-<button> Add Sound </button>
-</p>
-
-<div>
-  <input type="checkbox" class="check-with-label" id="idinput" />
-  <label class="label-for-check" for="idinput">My Label</label>
-</div>
+<br>
+<button> 🔴 </button> <button> Add Sound </button> <input placeholder="sound name">
+<br>
 
 <h2> Presets </h2>
 <p>
 <input class="check-with-label" type="checkbox" id="preset1" name="preset1"> <label class="label-for-check" for="preset1"> Preset 1 </label><br>
 <input class="check-with-label" type="checkbox" id="preset2" name="preset2"> <label class="label-for-check" for="preset2"> Preset 2 </label><br>
 <input class="check-with-label" type="checkbox" id="preset3" name="preset3"> <label class="label-for-check" for="preset3"> Preset 3 </label><br>
-<button> Add Preset </button>
+<button> Add Preset </button> <input placeholder="preset name">
 </p>
+
+<script type="text/javascript"> 
+  $(document).ready(function() { 
+    $("#preset1").click(function() {
+      $("#sound1").prop("checked", true); 
+   }); 
+    $("#preset2").click(function() {
+      $("#sound2").prop("checked", true); 
+      $("#sound1").prop("checked", true); 
+    }); 
+    $("#preset3").click(function() { 
+      $("#sound1").prop("checked", true); 
+      $("#sound2").prop("checked", true); 
+      $("#sound3").prop("checked", true); 
+     }); 
+   }); 
+</script>
 
 <div class="inner-div">
 <form action="home.html">
