@@ -1,21 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport"
-     content="width=device-width, initial-scale=1, user-scalable=yes">
- <link rel="stylesheet" href="styles.css">
-  <title>Customize</title>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+        <script src="semantic/semantic.min.js"></script>
+        <title>Customize Page</title>
+    </head>
 
-<script src= 
-"https://code.jquery.com/jquery-2.2.4.min.js"> 
-    </script> 
+    <body>
+        <h2 class="ui center aligned block header" style="text-align: center;">
+            <i class="clipboard list icon"></i>
+            <div class="content">
+                Customize
+                <div class="sub header">Edit preferences for alerts and presets</div>
+            </div>
+        </h2>
 
-</head>
-<body>
-<h1>Customize</h1>
-
-<h2> Sounds </h2>
+        <h2> Sounds </h2>
 <input class="check-with-label" type="checkbox" id="sound1" value="sound1">
 <label class="label-for-check" for="sound1"> Siren </label>
 <img src="sound 1 waves.png" style="width:40px;height:20px;">
@@ -32,55 +41,63 @@
 <br>
 
 <h2> Presets </h2>
+<style type="text/css">
+    .form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+</style>
 <p>
-<input class="check-with-label" type="checkbox" id="preset1" name="preset1"> <label class="label-for-check" for="preset1"> Preset 0 : Cobb Hall <form action="edit_preset.html"><input type="submit" value="Edit" /> </form> </label>
+<input class="check-with-label" type="checkbox" id="preset1" name="preset1"> <label class="label-for-check" for="preset1"> Preset 0 : Cobb Hall
+<a href="edit_preset.html"><button>Edit</button></a></label><br>
 <br>
 <input class="check-with-label" type="checkbox" id="preset1" name="preset1"> <label class="label-for-check" for="preset1"> Preset 1 : 8am-5pm</label>
-<form action="edit_preset.html"><input type="submit" value="Edit" /> </form>
+<a href="edit_preset.html"><button>Edit</button></a></label><br>
 <br>
 <input class="check-with-label" type="checkbox" id="preset2" name="preset2"> <label class="label-for-check" for="preset2"> Preset 2 : 5pm-8pm</label>
-<form action="edit_preset.html"><input type="submit" value="Edit" /> </form>
+<a href="edit_preset.html"><button>Edit</button></a></label><br>
 <br>
 <input class="check-with-label" type="checkbox" id="preset3" name="preset3"> <label class="label-for-check" for="preset3"> Preset 3 : 8pm-8am</label>
-<form action="edit_preset.html"><input type="submit" value="Edit" /> </form>
+<a href="edit_preset.html"><button>Edit</button></a></label><br>
 <br>
 <button> Add Preset </button> <input placeholder="preset name">
 </p>
 
-<script type="text/javascript"> 
-  $(document).ready(function() { 
+<script type="text/javascript">
+  $(document).ready(function() {
     $("#preset1").click(function() {
-      $("#sound1").prop("checked", true); 
-   }); 
+      $("#sound1").prop("checked", true);
+   });
     $("#preset2").click(function() {
-      $("#sound2").prop("checked", true); 
-      $("#sound1").prop("checked", true); 
-    }); 
-    $("#preset3").click(function() { 
-      $("#sound1").prop("checked", true); 
-      $("#sound2").prop("checked", true); 
-      $("#sound3").prop("checked", true); 
-     }); 
-   }); 
+      $("#sound2").prop("checked", true);
+      $("#sound1").prop("checked", true);
+    });
+    $("#preset3").click(function() {
+      $("#sound1").prop("checked", true);
+      $("#sound2").prop("checked", true);
+      $("#sound3").prop("checked", true);
+     });
+   });
 </script>
 
-<div class="inner-div">
-<form action="home.html">
-    <input type="submit" value="Home" />
-</form>
-
-<form action="sound_log.html">
-    <input type="submit" value="Sound Log" />
-</form>
-
-<form action="customize.html">
-    <input type="submit" value="Customize" />
-</form>
-
-<form action="settings.html">
-    <input type="submit" value="Settings" />
-</form>
-</div>
-
-</body>
+        <div class="ui bottom fixed four labeled icon menu">
+            <a class="item" href="home.html">
+                <i class="home icon"></i>
+                Home
+            </a>
+            <a class="item" href="sound_log.html">
+                <i class="file audio outline icon"></i>
+                Sound Log
+            </a>
+            <a class="item active">
+                <i class="clipboard list icon"></i>
+                Customize
+            </a>
+            <a class="item" href="settings.html">
+                <i class="cogs icon"></i>
+                Settings
+            </a>
+        </div>
+    </body>
 </html>

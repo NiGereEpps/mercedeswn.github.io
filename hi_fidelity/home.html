@@ -1,35 +1,56 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
-<head>
-<meta name="mobile-web-app-capable" content="yes">
-  <meta charset="utf-8">
-  <meta name="viewport"
-     content="width=device-width, initial-scale=1, user-scalable=yes">
-  <title> Home Screen</title>
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<h1>Home</h1>
-<img src="home_image.png" style="width:360px;height:360px;">
-<br>
-<div class="inner-div">
-<form action="home.html">
-    <input type="submit" value="Home" />
-</form>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+        <script src="semantic/semantic.min.js"></script>
+        <title>Home Page</title>
+    </head>
 
-<form action="sound_log.html">
-    <input type="submit" value="Sound Log" />
-</form>
+    <body>
+        <h2 class="ui center aligned block header" style="text-align: center;">
+            <i class="home icon"></i>
+            <div class="content">
+                Home
+                <div class="sub header">Your main sound alerts will appear here</div>
+            </div>
+        </h2>
 
-<form action="customize.html">
-    <input type="submit" value="Customize" />
-</form>
+        <h3 class="ui left aligned blue header" style="margin-left: 20px; margin-top: 40px;"><span id="datetime"></span></h3>
 
-<form action="settings.html">
-    <input type="submit" value="Settings" />
-</form>
-</div>
+        <script>
+            var dt = new Date();
+            document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
+        </script>
 
-</body>
+        <img class="ui fluid image" src="footsteps_sound_alert.png"
+             style="margin-top: 60px">
+
+        <div class="ui bottom fixed four labeled icon menu">
+            <a class="item active">
+                <i class="home icon"></i>
+                Home
+            </a>
+            <a class="item" href="sound_log.html">
+                <i class="file audio outline icon"></i>
+                Sound Log
+            </a>
+            <a class="item" href="customize.html">
+                <i class="clipboard list icon"></i>
+                Customize
+            </a>
+            <a class="item" href="settings.html">
+                <i class="cogs icon"></i>
+                Settings
+            </a>
+        </div>
+    </body>
 </html>
