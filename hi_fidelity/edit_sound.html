@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="jquery.timepicker.css">
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+    <script src="semantic/semantic.min.js"></script>
+
+    <title>Edit Preset</title>
+
+</head>
+<body>
+<h1>Edit Preset</h1>
+
+<h2> Select the vibration you'd like for this sound: </h2>
+<input class="check-with-label" type="checkbox" id="sound1" value="sound1">
+<img src="sound 1 waves.png" style="width:40px;height:20px;">
+<br>
+<input class="check-with-label" type="checkbox" id="sound2" name="sound2">
+<img src="sound 2 waves.png" style="width:40px;height:20px;">
+<br>
+<input class="check-with-label" type="checkbox" id="sound3" name="sound3">
+<img src="sound 3 waves.png" style="width:40px;height:20px;">
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#sound1").click(function() {
+      $("#sound1").prop("checked", true);
+      $("#sound2").prop("checked", false);
+      $("#sound3").prop("checked", false);
+   });
+    $("#sound2").click(function() {
+      $("#sound2").prop("checked", true);
+      $("#sound1").prop("checked", false);
+      $("#sound3").prop("checked", false);
+    });
+    $("#sound3").click(function() {
+      $("#sound1").prop("checked", false);
+      $("#sound2").prop("checked", false);
+      $("#sound3").prop("checked", true);
+     });
+   });
+</script>
+
+<br>
+<h2> Adjust vibration intensity: </h2>
+LOW
+<span class="slidecontainer">
+  <input type = "range" min = "1" max = "100" value = "50" class="slider2" id="myRange">
+</span>
+HIGH
+<br>
+<a href="customize.html"><button class="ui blue button">Done</button></a></label><br>
+<br>
+<br>
+<div class="ui bottom fixed four labeled icon menu">
+            <a class="item" href="home.html">
+                <i class="home icon"></i>
+                Home
+            </a>
+            <a class="item" href="sound_log.html">
+                <i class="file audio outline icon"></i>
+                Sound Log
+            </a>
+            <a class="item active">
+                <i class="clipboard list icon"></i>
+                Customize
+            </a>
+            <a class="item" href="settings.html">
+                <i class="cogs icon"></i>
+                Settings
+            </a>
+        </div>
+
+</body>
+</html>
