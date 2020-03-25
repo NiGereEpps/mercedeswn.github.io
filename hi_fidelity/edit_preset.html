@@ -6,6 +6,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="jquery.timepicker.css">
     <script
     src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -32,7 +33,30 @@
 <br>
 
 <h2> Select a preset time or location: </h2>
-<img src="start_end_times.png" style="width:200px;height:75px;">
+<p id="datepairExample">
+	<input type="text" class="time start" /> to
+	<input type="text" class="time end" />
+</p>
+
+<script type="text/javascript" src="Datepair.js"></script> 
+<script type="text/javascript" src="jquery.timepicker.js"></script>
+<script type="text/javascript" src="jquery.datepair.js"></script>
+<script>
+	// initialize input widgets first
+	$('#datepairExample .time').timepicker({
+		'showDuration': true,
+		'timeFormat': 'g:ia'
+	});
+
+	$('#datepairExample .date').datepicker({
+		'format': 'yyyy-m-d',
+		'autoclose': true
+	});
+
+	// initialize datepair
+	$('#datepairExample').datepair();
+</script>
+
 <img src="uchicago_map.png" style="width:250px;height:200px;">
 <br>
 <a href="customize.html"><button class="ui blue button">Done</button></a></label><br>
